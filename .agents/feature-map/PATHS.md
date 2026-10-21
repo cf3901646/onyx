@@ -173,6 +173,8 @@ so verify the callers rather than a single component.
 |---|---|
 | `backend/onyx/server/features/build/` | craft-sessions |
 | `backend/onyx/server/features/build/sandbox/` | craft-sandboxes |
+| `backend/onyx/server/features/build/session/resource_cleanup.py` | craft-sandboxes |
+| `backend/onyx/background/celery/tasks/build/tasks.py` | craft-sandboxes |
 | `backend/onyx/server/features/build/session/output_cards.py` | craft-sessions, craft-scheduled-tasks |
 | `backend/onyx/server/features/build/sandbox/image/sandbox_daemon/models.py` | craft-sandboxes, craft-sessions |
 | `backend/onyx/sandbox_proxy/` | craft-external-apps |
