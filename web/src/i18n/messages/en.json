@@ -14104,6 +14104,9 @@
         "projectId": "my-vertex-project",
         "location": "global"
       }
+    },
+    "appFooter": {
+      "slogan": "Open Source AI Platform"
     }
   },
   "craft": {
@@ -15935,6 +15938,10 @@
     "tabs": {
       "scrollLeft": "Scroll tabs left",
       "scrollRight": "Scroll tabs right"
+    },
+    "sidebar": {
+      "open": "Open Sidebar",
+      "close": "Close Sidebar"
     }
   },
   "settings": {
