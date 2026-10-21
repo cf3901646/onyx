@@ -15943,8 +15943,7 @@
       "scrollRight": "Faire défiler les onglets vers la droite"
     },
     "toast": {
-      "moreCount": "+{count} de plus",
-      "showLess": "Afficher moins"
+      "moreCount": "+{count} de plus"
     }
   },
   "settings": {

@@ -15943,8 +15943,7 @@
       "scrollRight": "Desplazar pestañas a la derecha"
     },
     "toast": {
-      "moreCount": "+{count} más",
-      "showLess": "Mostrar menos"
+      "moreCount": "+{count} más"
     }
   },
   "settings": {

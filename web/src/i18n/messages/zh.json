@@ -15943,8 +15943,7 @@
       "scrollRight": "向右滚动标签"
     },
     "toast": {
-      "moreCount": "还有 {count} 条",
-      "showLess": "收起"
+      "moreCount": "还有 {count} 条"
     }
   },
   "settings": {

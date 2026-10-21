@@ -15943,8 +15943,7 @@
       "scrollRight": "Rolar abas para a direita"
     },
     "toast": {
-      "moreCount": "+{count} mais",
-      "showLess": "Mostrar menos"
+      "moreCount": "+{count} mais"
     }
   },
   "settings": {
