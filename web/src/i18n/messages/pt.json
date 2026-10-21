@@ -2215,33 +2215,23 @@
     },
     "chatPreferences": {
       "chatNaming": {
-        "description": "Modelo usado para nomear sessões de chat. Por padrão, usa o modelo de cada sessão.",
-        "resetButton": {
-          "label": "Redefinir"
-        },
+        "description": "Gera os títulos das sessões. Um modelo rápido e de baixo custo funciona bem.",
         "sessionModel": {
           "label": "Usar modelo padrão"
         },
-        "title": "Modelo para nomear chats"
+        "title": "Modelo de nomeação de chats"
       },
       "searchSelectionModel": {
-        "description": "Seleciona e verifica os documentos recuperados. Um modelo mais barato pode reduzir os custos de busca, mas pode afetar a qualidade das respostas.",
-        "resetButton": {
-          "label": "Redefinir"
-        },
+        "description": "Seleciona e verifica os documentos recuperados. Por padrão, usa o modelo de cada chat.",
         "sessionModel": {
           "label": "Usar modelo padrão"
         },
-        "title": "Modelo de seleção da busca"
+        "title": "Modelo de seleção de pesquisa"
       },
       "taskModels": {
-        "title": "Seleção de modelos",
         "loadFailed": "Não foi possível carregar os modelos de tarefas",
         "retry": {
           "label": "Tentar novamente"
-        },
-        "noProviders": {
-          "title": "Conecte um provedor de modelos de linguagem"
         },
         "addProvider": {
           "label": "Adicionar provedor"
@@ -2344,10 +2334,6 @@
         },
         "title": "Visibilidade do histórico de consultas"
       },
-      "reasoning": {
-        "description": "Permita que os usuários ajustem quanto raciocínio o modelo faz antes de responder, no seletor de modelos do chat.",
-        "title": "Controle de raciocínio"
-      },
       "retention": {
         "custom": {
           "invalidError": "Insira um número inteiro de dias entre 1 e {max}.",
@@ -2418,26 +2404,13 @@
         "placeholder": "Insira o nome da equipe",
         "title": "Nome da equipe"
       },
-      "temperature": {
-        "description": "Permita que os usuários ajustem a temperatura (criatividade) das respostas do modelo no seletor de modelos do chat.",
-        "title": "Controle de temperatura"
-      },
       "toasts": {
-        "chatNamingUpdated": "Modelo para nomear chats atualizado",
-        "chatNamingReset": "Modelo para nomear chats redefinido para o modelo padrão",
         "chatNamingUpdateFailed": "Falha ao atualizar o modelo para nomear chats",
-        "chatNamingResetFailed": "Falha ao redefinir o modelo para nomear chats",
         "providerResolveFailed": "Não foi possível resolver o provedor",
-        "searchSelectionReset": "Modelo de seleção da busca redefinido para o modelo padrão",
-        "searchSelectionResetFailed": "Falha ao redefinir o modelo de seleção da busca",
         "searchSelectionUpdateFailed": "Falha ao atualizar o modelo de seleção da busca",
-        "searchSelectionUpdated": "Modelo de seleção da busca atualizado",
         "settingsUpdateFailed": "Falha ao atualizar as configurações",
-        "settingsUpdated": "Configurações atualizadas",
         "systemPromptUpdateFailed": "Falha ao atualizar o prompt de sistema",
-        "systemPromptUpdated": "Prompt de sistema atualizado",
         "toolsUpdateFailed": "Falha ao atualizar as ferramentas",
-        "toolsUpdated": "Ferramentas atualizadas",
         "unknownError": "Ocorreu um erro desconhecido"
       },
       "tools": {
@@ -4917,9 +4890,7 @@
       },
       "toasts": {
         "removeFailed": "Falha ao remover a substituição: {message}",
-        "removed": "Substituição removida para {model}.",
         "saveFailed": "Falha ao salvar a substituição: {message}",
-        "saved": "Taxa salva para {model}.",
         "unknownError": "Erro desconhecido"
       }
     },
@@ -7959,11 +7930,9 @@
       },
       "toasts": {
         "providerDeleteFailed": "Falha ao excluir o provedor: {message}",
-        "providerDeleted": "Provedor excluído com sucesso!",
         "providerLoadFailed": "Não foi possível carregar o provedor: {message}",
         "providerResolveFailed": "Não foi possível resolver o provedor",
         "settingsUpdateFailed": "Falha ao atualizar as configurações",
-        "settingsUpdated": "Configurações atualizadas",
         "unknownError": "Erro desconhecido"
       },
       "modelRouting": {
@@ -7988,6 +7957,14 @@
           "productName": "Modelos personalizados",
           "companyName": "Endpoints compatíveis com OpenAI"
         }
+      },
+      "reasoning": {
+        "description": "Permita que os usuários ajustem quanto raciocínio o modelo faz antes de responder, no seletor de modelos do chat.",
+        "title": "Controle de raciocínio"
+      },
+      "temperature": {
+        "description": "Permita que os usuários ajustem a temperatura (criatividade) das respostas do modelo no seletor de modelos do chat.",
+        "title": "Controle de temperatura"
       }
     },
     "mcpActions": {
@@ -14136,6 +14113,11 @@
         "projectId": "meu-projeto-vertex",
         "location": "global"
       }
+    },
+    "languageSelect": {
+      "globalDefault": {
+        "label": "Padrão global"
+      }
     }
   },
   "craft": {
@@ -15997,8 +15979,7 @@
         "title": "Alterar senha",
         "toasts": {
           "networkError": "Ocorreu um erro ao alterar a senha",
-          "updateFailed": "Falha ao alterar a senha",
-          "updated": "Senha atualizada com sucesso"
+          "updateFailed": "Falha ao alterar a senha"
         },
         "validation": {
           "confirmRequired": "Confirme sua nova senha",
@@ -16070,10 +16051,8 @@
       "toasts": {
         "createFailed": "Falha ao criar token",
         "createNetworkError": "Erro de rede ao criar token",
-        "created": "Token criado com sucesso",
         "deleteFailed": "Falha ao excluir token",
         "deleteNetworkError": "Erro de rede ao excluir token",
-        "deleted": "Token excluído com sucesso",
         "loadFailed": "Falha ao carregar tokens",
         "loadPermissionsFailed": "Falha ao carregar opções de permissão",
         "nameRequired": "O nome do token é obrigatório"
@@ -16137,8 +16116,7 @@
       },
       "title": "Chats",
       "toasts": {
-        "saveFailed": "Falha ao salvar preferências",
-        "saved": "Preferências salvas"
+        "saveFailed": "Falha ao salvar preferências"
       }
     },
     "connectors": {
@@ -16158,8 +16136,7 @@
       },
       "title": "Conectores",
       "toasts": {
-        "disconnectFailed": "Falha ao desconectar",
-        "disconnected": "Desconectado com sucesso"
+        "disconnectFailed": "Falha ao desconectar"
       }
     },
     "dangerZone": {
@@ -16175,8 +16152,7 @@
         "description": "Exclua permanentemente todas as suas sessões de chat.",
         "title": "Excluir todos os chats",
         "toasts": {
-          "deleteFailed": "Falha ao excluir todas as sessões de chat",
-          "deleted": "Todas as suas sessões de chat foram excluídas."
+          "deleteFailed": "Falha ao excluir todas as sessões de chat"
         }
       },
       "title": "Zona de perigo"
@@ -16223,8 +16199,7 @@
       "title": "Idioma",
       "toasts": {
         "updateFailed": "Não foi possível atualizar a preferência de idioma"
-      },
-      "workspaceDefault": "Padrão ({language})"
+      }
     },
     "layout": {
       "header": {
@@ -16311,8 +16286,7 @@
       },
       "title": "Perfil",
       "toasts": {
-        "updateFailed": "Falha ao atualizar a personalização",
-        "updated": "Personalização atualizada com sucesso"
+        "updateFailed": "Falha ao atualizar a personalização"
       },
       "workRole": {
         "description": "Compartilhe seu cargo para personalizar melhor as respostas.",
@@ -16330,12 +16304,9 @@
       "title": "Atalhos de prompt",
       "toasts": {
         "bothRequired": "O atalho e a expansão são obrigatórios",
-        "created": "Atalho criado",
         "deleteFailed": "Falha ao excluir atalho",
-        "deleted": "Atalho excluído",
         "loadFailed": "Falha ao carregar atalhos",
-        "saveFailed": "Falha ao salvar atalho",
-        "updated": "Atalho atualizado"
+        "saveFailed": "Falha ao salvar atalho"
       },
       "toggle": {
         "description": "Ative os atalhos para inserir rapidamente prompts comuns.",
