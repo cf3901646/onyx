@@ -10,8 +10,14 @@ import {
   useAdminLanguageModels,
 } from "@/lib/languageModels/hooks";
 import { useProviderNames } from "@/lib/languageModels/useProviderNames";
-import { LineLoader, PageLoader } from "@opal/loaders";
-import { Content, ContentAction, InputHorizontal, toast } from "@opal/layouts";
+import { DropdownLoader, PageLoader } from "@opal/loaders";
+import {
+  Content,
+  ContentAction,
+  InputHorizontal,
+  toast,
+  useErrorToast,
+} from "@opal/layouts";
 import {
   Button,
   Divider,
@@ -433,6 +439,17 @@ export default function LanguageModelsPage() {
     }
   );
 
+  const routerProvidersLoading =
+    routerProviders === undefined && !routerProvidersError;
+  useErrorToast(routerProvidersError, {
+    id: "router-models-load-failed",
+    message: t("modelRouting.target.error"),
+    retry: {
+      label: t("modelRouting.target.retry"),
+      onRetry: () => void mutateRouterProviders(),
+    },
+  });
+
   // Resolve the current default to a model_configuration_id for the select
   const defaultModelConfigId = useMemo(() => {
     if (!defaultText || !existingLlmProviders) return null;
@@ -690,33 +707,23 @@ export default function LanguageModelsPage() {
                   title={t("modelRouting.target.title")}
                   description={t("modelRouting.target.description")}
                   withLabel
-                  // The shimmer spans the input column; the select hugs.
-                  fillInput={routerProviders === undefined}
+                  // The loader spans the input column; the select hugs.
+                  fillInput={routerProvidersLoading}
                 >
-                  {routerProvidersError ? (
-                    <Section flexDirection="row" alignItems="center" gap={2}>
-                      <Text font="secondary-body" color="text-03">
-                        {t("modelRouting.target.error")}
-                      </Text>
-                      <Button
-                        prominence="tertiary"
-                        size="sm"
-                        onClick={() => void mutateRouterProviders()}
-                      >
-                        {t("modelRouting.target.retry")}
-                      </Button>
-                    </Section>
-                  ) : routerProviders === undefined ? (
-                    <LineLoader />
+                  {routerProvidersLoading ? (
+                    <DropdownLoader />
                   ) : (
                     <SimpleModelSelector
-                      providers={routerProviders}
+                      providers={routerProviders ?? []}
+                      isError={routerProvidersError ? true : undefined}
                       value={
                         pendingRoutingTarget ??
                         settings.model_routing_model_configuration_id ??
                         null
                       }
-                      disabled={pendingRoutingTarget !== null}
+                      disabled={
+                        pendingRoutingTarget !== null || !!routerProvidersError
+                      }
                       grouped={
                         !(
                           pendingHideGrouping ?? settings.hide_provider_grouping
